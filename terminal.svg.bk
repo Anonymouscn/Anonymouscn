@@ -1,0 +1,345 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <defs>
+    <clipPath id="clip">
+      <rect x="40" y="70" width="880" height="430" rx="16" ry="16"/>
+    </clipPath>
+
+    <radialGradient id="vignette" cx="50%" cy="40%" r="75%">
+      <stop offset="0%" stop-color="rgba(0,0,0,0)"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.55)"/>
+    </radialGradient>
+
+    <style>
+      .mono {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        font-size: 18px;
+        fill: #c7d0ff;
+      }
+    </style>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="960" height="540" fill="#0b0d12"/>
+
+  <!-- 终端外壳 -->
+  <rect x="28" y="28" width="904" height="484" rx="18" ry="18" fill="#121622" stroke="#1e2433" stroke-width="2"/>
+  <rect x="28" y="28" width="904" height="42" rx="18" ry="18" fill="#171c2a"/>
+  <rect x="28" y="52" width="904" height="460" fill="#0f1320"/>
+
+  <!-- 窗口按钮 -->
+  <circle cx="56" cy="49" r="7" fill="#ff5f57"/>
+  <circle cx="78" cy="49" r="7" fill="#febc2e"/>
+  <circle cx="100" cy="49" r="7" fill="#28c840"/>
+
+  <!-- 标题 -->
+  <text x="480" y="55" text-anchor="middle"
+        font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial"
+        font-size="14"
+        fill="rgba(255,255,255,0.65)">anonymous@github: ~</text>
+
+  <!-- 内容区 -->
+  <g clip-path="url(#clip)">
+    <rect x="40" y="70" width="880" height="430" fill="#0f1320"/>
+    <rect x="40" y="70" width="880" height="430" fill="url(#vignette)" opacity="0.9"/>
+
+    <!--
+      ✅ “滚屏模拟”的关键：
+      - 把所有文本和光标放进同一个 <g id="scroll">
+      - 当内容超过窗口可显示行数后，每出现一行就给这个组一个 translate(0,-24) 的累计动画
+      - 这样视口里就永远看到最新行（像终端滚动）
+    -->
+    <g id="scroll">
+      <!-- 从第 18 行开始溢出，因此从 l18 的 begin 时间起，每行向上滚动一行（24px） -->
+      <!-- 每行间隔 step=0.35s，所以第 N 行的 begin = (N-1)*0.35s -->
+      <!-- 这里从 N=18 到 N=51 一共 34 次滚动 -->
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        begin="5.95s" dur="0.001s" by="0 -24" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        begin="6.30s" dur="0.001s" by="0 -24" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        begin="6.65s" dur="0.001s" by="0 -24" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        begin="7.00s" dur="0.001s" by="0 -24" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        begin="7.35s" dur="0.001s" by="0 -24" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        begin="7.70s" dur="0.001s" by="0 -24" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        begin="8.05s" dur="0.001s" by="0 -24" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        begin="8.40s" dur="0.001s" by="0 -24" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        begin="8.75s" dur="0.001s" by="0 -24" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        begin="9.10s" dur="0.001s" by="0 -24" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        begin="9.45s" dur="0.001s" by="0 -24" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        begin="9.80s" dur="0.001s" by="0 -24" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        begin="10.15s" dur="0.001s" by="0 -24" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        begin="10.50s" dur="0.001s" by="0 -24" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        begin="10.85s" dur="0.001s" by="0 -24" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        begin="11.20s" dur="0.001s" by="0 -24" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        begin="11.55s" dur="0.001s" by="0 -24" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        begin="11.90s" dur="0.001s" by="0 -24" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        begin="12.25s" dur="0.001s" by="0 -24" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        begin="12.60s" dur="0.001s" by="0 -24" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        begin="12.95s" dur="0.001s" by="0 -24" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        begin="13.30s" dur="0.001s" by="0 -24" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        begin="13.65s" dur="0.001s" by="0 -24" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        begin="14.00s" dur="0.001s" by="0 -24" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        begin="14.35s" dur="0.001s" by="0 -24" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        begin="14.70s" dur="0.001s" by="0 -24" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        begin="15.05s" dur="0.001s" by="0 -24" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        begin="15.40s" dur="0.001s" by="0 -24" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        begin="15.75s" dur="0.001s" by="0 -24" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        begin="16.10s" dur="0.001s" by="0 -24" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        begin="16.45s" dur="0.001s" by="0 -24" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        begin="16.80s" dur="0.001s" by="0 -24" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        begin="17.15s" dur="0.001s" by="0 -24" fill="freeze"/>
+      <animateTransform attributeName="transform" type="translate" additive="sum"
+                        begin="17.50s" dur="0.001s" by="0 -24" fill="freeze"/>
+
+      <!-- 文本（每行一个 tspan） -->
+      <text class="mono" x="60" y="105" xml:space="preserve">
+
+        <tspan id="l01" x="60" dy="0"  opacity="0">┌──(anonymous㉿github)-[~]</tspan>
+        <animate xlink:href="#l01" attributeName="opacity" from="0" to="1" begin="0.00s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l02" x="60" dy="24" opacity="0">└─$ whoami</tspan>
+        <animate xlink:href="#l02" attributeName="opacity" from="0" to="1" begin="0.35s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l03" x="60" dy="24" opacity="0">anonymous</tspan>
+        <animate xlink:href="#l03" attributeName="opacity" from="0" to="1" begin="0.70s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l04" x="60" dy="24" opacity="0"> </tspan>
+        <animate xlink:href="#l04" attributeName="opacity" from="0" to="1" begin="1.05s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l05" x="60" dy="24" opacity="0">┌──(anonymous㉿github)-[~]</tspan>
+        <animate xlink:href="#l05" attributeName="opacity" from="0" to="1" begin="1.40s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l06" x="60" dy="24" opacity="0">└─$ echo $MY_SPACE</tspan>
+        <animate xlink:href="#l06" attributeName="opacity" from="0" to="1" begin="1.75s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l07" x="60" dy="24" opacity="0">https://anonymous.net.cn</tspan>
+        <animate xlink:href="#l07" attributeName="opacity" from="0" to="1" begin="2.10s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l08" x="60" dy="24" opacity="0"> </tspan>
+        <animate xlink:href="#l08" attributeName="opacity" from="0" to="1" begin="2.45s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l09" x="60" dy="24" opacity="0">┌──(anonymous㉿github)-[~]</tspan>
+        <animate xlink:href="#l09" attributeName="opacity" from="0" to="1" begin="2.80s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l10" x="60" dy="24" opacity="0">└─$ cat about.me</tspan>
+        <animate xlink:href="#l10" attributeName="opacity" from="0" to="1" begin="3.15s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l11" x="60" dy="24" opacity="0">Hi, guys 👋🏻.</tspan>
+        <animate xlink:href="#l11" attributeName="opacity" from="0" to="1" begin="3.50s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l12" x="60" dy="24" opacity="0"> </tspan>
+        <animate xlink:href="#l12" attributeName="opacity" from="0" to="1" begin="3.85s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l13" x="60" dy="24" opacity="0">I'm anonymous.</tspan>
+        <animate xlink:href="#l13" attributeName="opacity" from="0" to="1" begin="4.20s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l14" x="60" dy="24" opacity="0"> </tspan>
+        <animate xlink:href="#l14" attributeName="opacity" from="0" to="1" begin="4.55s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l15" x="60" dy="24" opacity="0">Good to see U on Github.</tspan>
+        <animate xlink:href="#l15" attributeName="opacity" from="0" to="1" begin="4.90s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l16" x="60" dy="24" opacity="0"> </tspan>
+        <animate xlink:href="#l16" attributeName="opacity" from="0" to="1" begin="5.25s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l17" x="60" dy="24" opacity="0">I work in Shenzhen, China as a Software Developer 💻.</tspan>
+        <animate xlink:href="#l17" attributeName="opacity" from="0" to="1" begin="5.60s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l18" x="60" dy="24" opacity="0"> </tspan>
+        <animate xlink:href="#l18" attributeName="opacity" from="0" to="1" begin="5.95s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l19" x="60" dy="24" opacity="0">I mainly work in web development, AI research, and cybersecurity research.</tspan>
+        <animate xlink:href="#l19" attributeName="opacity" from="0" to="1" begin="6.30s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l20" x="60" dy="24" opacity="0"> </tspan>
+        <animate xlink:href="#l20" attributeName="opacity" from="0" to="1" begin="6.65s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l21" x="60" dy="24" opacity="0">I have a passionate obsession with computers and an extreme demand for performance.</tspan>
+        <animate xlink:href="#l21" attributeName="opacity" from="0" to="1" begin="7.00s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l22" x="60" dy="24" opacity="0"> </tspan>
+        <animate xlink:href="#l22" attributeName="opacity" from="0" to="1" begin="7.35s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l23" x="60" dy="24" opacity="0">If you share my enthusiasm for CS, internet, and AI technologies, feel free to discuss</tspan>
+        <animate xlink:href="#l23" attributeName="opacity" from="0" to="1" begin="7.70s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l24" x="60" dy="24" opacity="0">these topics with me!</tspan>
+        <animate xlink:href="#l24" attributeName="opacity" from="0" to="1" begin="8.05s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l25" x="60" dy="24" opacity="0"> </tspan>
+        <animate xlink:href="#l25" attributeName="opacity" from="0" to="1" begin="8.40s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l26" x="60" dy="24" opacity="0">┌──(anonymous㉿github)-[~]</tspan>
+        <animate xlink:href="#l26" attributeName="opacity" from="0" to="1" begin="8.75s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l27" x="60" dy="24" opacity="0">└─$ su</tspan>
+        <animate xlink:href="#l27" attributeName="opacity" from="0" to="1" begin="9.10s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l28" x="60" dy="24" opacity="0">Password:</tspan>
+        <animate xlink:href="#l28" attributeName="opacity" from="0" to="1" begin="9.45s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l29" x="60" dy="24" opacity="0">┌──(root㉿github)-[/home/anonymous]</tspan>
+        <animate xlink:href="#l29" attributeName="opacity" from="0" to="1" begin="9.80s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l30" x="60" dy="24" opacity="0">└─# eval "$(ssh-agent -s)"</tspan>
+        <animate xlink:href="#l30" attributeName="opacity" from="0" to="1" begin="10.15s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l31" x="60" dy="24" opacity="0">Agent pid 12657</tspan>
+        <animate xlink:href="#l31" attributeName="opacity" from="0" to="1" begin="10.50s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l32" x="60" dy="24" opacity="0"> </tspan>
+        <animate xlink:href="#l32" attributeName="opacity" from="0" to="1" begin="10.85s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l33" x="60" dy="24" opacity="0">┌──(root㉿github)-[/home/anonymous]</tspan>
+        <animate xlink:href="#l33" attributeName="opacity" from="0" to="1" begin="11.20s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l34" x="60" dy="24" opacity="0">└─# ssh-add /root/.ssh/github-Anonymouscn</tspan>
+        <animate xlink:href="#l34" attributeName="opacity" from="0" to="1" begin="11.55s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l35" x="60" dy="24" opacity="0">Identity added: /root/.ssh/github-Anonymouscn (Anonymouscn@github.com)</tspan>
+        <animate xlink:href="#l35" attributeName="opacity" from="0" to="1" begin="11.90s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l36" x="60" dy="24" opacity="0"> </tspan>
+        <animate xlink:href="#l36" attributeName="opacity" from="0" to="1" begin="12.25s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l37" x="60" dy="24" opacity="0">┌──(root㉿github)-[/home/anonymous]</tspan>
+        <animate xlink:href="#l37" attributeName="opacity" from="0" to="1" begin="12.60s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l38" x="60" dy="24" opacity="0">└─# ssh git@github.com</tspan>
+        <animate xlink:href="#l38" attributeName="opacity" from="0" to="1" begin="12.95s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l39" x="60" dy="24" opacity="0">Hi Anonymouscn! You've successfully authenticated.</tspan>
+        <animate xlink:href="#l39" attributeName="opacity" from="0" to="1" begin="13.30s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l40" x="60" dy="24" opacity="0"> </tspan>
+        <animate xlink:href="#l40" attributeName="opacity" from="0" to="1" begin="13.65s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l41" x="60" dy="24" opacity="0">┌──(root㉿github)-[/home/anonymous]</tspan>
+        <animate xlink:href="#l41" attributeName="opacity" from="0" to="1" begin="14.00s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l42" x="60" dy="24" opacity="0">└─# nslookup github.com | nail</tspan>
+        <animate xlink:href="#l42" attributeName="opacity" from="0" to="1" begin="14.35s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l43" x="60" dy="24" opacity="0">Server:		192.168.65.7 [局域网 对方和您在同一内部网]</tspan>
+        <animate xlink:href="#l43" attributeName="opacity" from="0" to="1" begin="14.70s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l44" x="60" dy="24" opacity="0">Address:	192.168.65.7 [局域网 对方和您在同一内部网] #53</tspan>
+        <animate xlink:href="#l44" attributeName="opacity" from="0" to="1" begin="15.05s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l45" x="60" dy="24" opacity="0"> </tspan>
+        <animate xlink:href="#l45" attributeName="opacity" from="0" to="1" begin="15.40s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l46" x="60" dy="24" opacity="0">Non-authoritative answer:</tspan>
+        <animate xlink:href="#l46" attributeName="opacity" from="0" to="1" begin="15.75s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l47" x="60" dy="24" opacity="0">Name:	github.com</tspan>
+        <animate xlink:href="#l47" attributeName="opacity" from="0" to="1" begin="16.10s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l48" x="60" dy="24" opacity="0">Address: 140.82.112.4 [美国–华盛顿州–金–西雅图 GitHub公司]</tspan>
+        <animate xlink:href="#l48" attributeName="opacity" from="0" to="1" begin="16.45s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l49" x="60" dy="24" opacity="0"> </tspan>
+        <animate xlink:href="#l49" attributeName="opacity" from="0" to="1" begin="16.80s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l50" x="60" dy="24" opacity="0">┌──(root㉿github)-[/home/anonymous]</tspan>
+        <animate xlink:href="#l50" attributeName="opacity" from="0" to="1" begin="17.15s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+        <tspan id="l51" x="60" dy="24" opacity="0">└─# </tspan>
+        <animate xlink:href="#l51" attributeName="opacity" from="0" to="1" begin="17.50s" dur="0.001s" fill="freeze"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"/>
+
+      </text>
+
+      <!-- 光标：放在最后一行提示符后（跟随滚动组一起移动） -->
+      <!-- x 需要按字体稍微微调；这里对齐在“└─# ”后 -->
+      <rect x="104" y="517" width="10" height="20" fill="#c7d0ff" opacity="0">
+        <animate attributeName="opacity"
+                 values="1;1;0.12;0.12;1"
+                 keyTimes="0;0.49;0.50;0.99;1"
+                 dur="1.04s"
+                 begin="17.55s"
+                 repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
+</svg>
