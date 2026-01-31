@@ -1,2 +1,2 @@
 ### Hi !
-![terminal](terminal.svg)
+![terminal](terminal.svg.bak)
