@@ -1,2 +1,2 @@
 ### Hi !
-![terminal](terminal.gif)
+![terminal](terminal.small.gif)
