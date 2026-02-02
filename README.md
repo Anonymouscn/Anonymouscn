@@ -11,3 +11,6 @@
 * `Web3`: Blockchain, Smart Contract, On-chain Transaction, DEX, etc.
 * `Crypto`: BTC, ETH, XMR, etc.
 * `Life`: Coffee, Social, Hiking, Billiards.
+
+#### Technical Today
+[Summary in 2026](tech-stack/2026.md)
